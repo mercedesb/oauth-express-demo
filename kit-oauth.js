@@ -7,7 +7,7 @@ const KIT_OAUTH_CLIENT_SECRET =
   process.env.KIT_OAUTH_CLIENT_SECRET || "FILL ME IN";
 const KIT_OAUTH_AUTHORIZATION_URL = `https://app.${KIT_SERVER}/oauth/authorize`;
 const KIT_OAUTH_TOKEN_URL = `https://app.${KIT_SERVER}/oauth/token`;
-const KIT_OAUTH_CALLBACK_URL = `${SCHEME}://${HOST}:${PORT}/oauth/kit/callback`;
+const KIT_OAUTH_CALLBACK_URL = `${SCHEME}://${HOST}/oauth/kit/callback`;
 const KIT_OAUTH_INSTALL_REDIRECT = `https://app.${KIT_SERVER}/apps?success=true`;
 
 OAuth2Strategy.prototype.userProfile = function (accessToken, done) {
@@ -34,6 +34,7 @@ const oauthConfiguration = {
 const KitOAuth = new OAuth2Strategy(
   oauthConfiguration,
   (accessToken, refreshToken, profile, cb) => {
+    console.log("hello?")
     // Find or create user in database
     const user = {
       kitId: profile.account.id,
@@ -44,6 +45,8 @@ const KitOAuth = new OAuth2Strategy(
     return cb(null, user);
   }
 );
+
+console.log({oauthConfiguration})
 
 module.exports = KitOAuth;
 module.exports.KIT_OAUTH_INSTALL_REDIRECT = KIT_OAUTH_INSTALL_REDIRECT;

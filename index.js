@@ -4,7 +4,7 @@ const http = require("http");
 const express = require("express");
 const passport = require("passport");
 
-const { HOST, PORT, HTTPS_KEY, HTTPS_CERT } = require("./config");
+const { HOST, PORT } = require("./config");
 const KitOAuth = require("./kit-oauth");
 
 const app = express();
