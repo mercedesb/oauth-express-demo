@@ -8,7 +8,7 @@ const KIT_OAUTH_CLIENT_SECRET =
 const KIT_OAUTH_AUTHORIZATION_URL = `https://app.${KIT_SERVER}/oauth/authorize`;
 const KIT_OAUTH_TOKEN_URL = `https://app.${KIT_SERVER}/oauth/token`;
 const KIT_OAUTH_CALLBACK_URL = `${SCHEME}://${HOST}/oauth/kit/callback`;
-const KIT_OAUTH_INSTALL_REDIRECT = `https://app.${KIT_SERVER}/apps?success=true`;
+const KIT_OAUTH_INSTALL_REDIRECT = `https://app.${KIT_SERVER}/apps/12/install`;
 
 OAuth2Strategy.prototype.userProfile = function (accessToken, done) {
   this._oauth2.get(

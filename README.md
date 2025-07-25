@@ -8,8 +8,8 @@
 
 2. Then configure API Access:
 
-        Authorization URL: https://localhost:8080/oauth/kit
-             Redirect URI: https://localhost:8080/oauth/kit/callback
+        Authorization URL: http://localhost:8080/oauth/kit
+             Redirect URI: http://localhost:8080/oauth/kit/callback
 
 3. Create `.env` file and add the client ID and secret from the Developer Settings:
 

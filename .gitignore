@@ -1,3 +1,9 @@
 .glitchdotcom.json
 .node-gyp
 node_modules
+example.com-key.pem
+example.com.pem
+.env
+.bash_history
+shrinkwrap.yaml
+.config

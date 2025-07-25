@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const SCHEME = process.env.SCHEME || "https";
+// const SCHEME = process.env.SCHEME || "https";
+const SCHEME = "http";
 const HOST = process.env.HOST || "localhost";
 const PORT = Number.parseInt(process.env.PORT || "8080");
 

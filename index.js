@@ -11,6 +11,14 @@ const app = express();
 const server = http.createServer(app);
 
 passport.use(KitOAuth);
+app.get("/", (request, response) => {
+  response.json({
+    code: 200,
+    data: {
+      hello: "world"
+    }
+  })
+});
 app.get("/oauth/kit", passport.authenticate("oauth2"));
 app.get(
   "/oauth/kit/callback",
