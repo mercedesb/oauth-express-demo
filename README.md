@@ -34,8 +34,8 @@
         > node --env-file .env index.js
 
         Kit OAuth Configuration {
-          authorizationURL: 'https://app.convertkit.com/oauth/authorize',
-          tokenURL: 'https://app.convertkit.com/oauth/token',
+          authorizationURL: 'https://app.kit.com/oauth/authorize',
+          tokenURL: 'https://app.kit.com/oauth/token',
           clientID: '*******************************************',
           clientSecret: '*******************************************',
           callbackURL: 'https://localhost:8080/oauth/kit/callback'
